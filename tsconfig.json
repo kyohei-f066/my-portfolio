@@ -1,27 +1,38 @@
 {
   "compilerOptions": {
+    // コンパイラの基本設定
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+
+    // Next.jsとの連携設定
     "noEmit": true,
+    "jsx": "preserve",
+    "incremental": true,
+
+    // モジュール関連の設定
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+
+    // Next.js固有の設定
     "plugins": [
       {
         "name": "next"
       }
     ],
+
+    // 開発効率化の設定
     "paths": {
       "@/*": ["./src/*"]
     }
   },
+
+  // 型チェックの対象範囲
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
